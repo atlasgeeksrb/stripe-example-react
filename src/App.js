@@ -1,25 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {Component} from 'react';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import PaymentComplete from './components/paymentComplete';
+import Checkout from './components/checkout';
+import NotFound from './components/notFound';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+  render () {
+    return (
+      <div className="container">        
+        <BrowserRouter>
+          <Routes>
+            <Route 
+              path="/"
+              element={<div>
+                  <h1>Stripe Checkout Example</h1>
+                  <p><a href="/checkout" title="try checkout example">check out</a></p>
+                </div>
+              }
+            />
+
+            <Route
+              path="/paymentComplete" 
+              element={
+                <PaymentComplete />
+              }
+            />
+
+            <Route
+              path="/checkout" 
+              element={
+                <Checkout />
+              }
+            />
+
+            <Route path="/*" element={<NotFound />} />
+
+          </Routes>
+        </BrowserRouter>  
+
+      </div>
+    );
+    }
+  }
 
 export default App;
