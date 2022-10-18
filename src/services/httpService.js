@@ -12,12 +12,9 @@ axios.interceptors.response.use(axiosResponse => {
         axiosError.response.status >=200 &&
         axiosError.response.status < 300;
     if(axiosError.response && !expectedResponse) {
-        const resp = axiosError.response;
-        if(resp.status === 401) {
-            if(resp.data && resp.data.message && resp.data.message === "Token is expired") {
-                authenticationService.logout();
-            }
-        }
+        // const resp = axiosError.response;
+        // if(resp.status === 401) {
+        // }
         // if we handle the error, we have to manually reject/return it
         return Promise.reject(axiosError);
     }
