@@ -13,6 +13,6 @@ export async function initiatePayment(amount, items) {
 }
 
 export async function getPaymentDetails(id) {
-  let response = await http.get(`${paymentApiRouteBase}${id}`);
+  let response = await http.get(`${paymentApiRouteBase}payment/${id}`);
   return response;
 }
