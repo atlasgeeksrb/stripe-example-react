@@ -1,3 +1,5 @@
 {
-    "paymentApiRouteBase": "http://localhost:8080/"
+    "paymentApiRouteBase": "http://localhost:8080/",
+    "reactUrl": "http://localhost:3000",
+    "stripeKey": ""
 }
