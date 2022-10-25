@@ -2,7 +2,7 @@
 
 Simple example implementing front end of Stripe payment processing.
 
-Use this example in conjunction with the [https://github.com/atlasgeeksrb/stripeExampleGolang]stripeExampleGolang back-end service.
+Use this example in conjunction with the [stripeExampleGolang](https://github.com/atlasgeeksrb/stripeExampleGolang) back-end service.
 
 Stripe payment processing requires the back end (golang service) to request a payment intent using the private API key. 
 
