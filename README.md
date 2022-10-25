@@ -8,6 +8,10 @@ Stripe payment processing requires the back end (golang service) to request a pa
 
 The front end fires a request to the back end to generate the payment intent; the front end then processes the payment at checkout submit, using the client secret returned by the back end for the payment intent, sending the completion request to stripe using the public key from config.js
 
+config.json contains settings:
+- paymentApiRouteBase: the url for the golang service
+- reactUrl: url of the React front-end
+- stripeKey: public key for the Stripe account
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
